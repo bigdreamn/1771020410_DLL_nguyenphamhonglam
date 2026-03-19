@@ -1,0 +1,25 @@
+# Configuration for HR Analytics Data Mining Project
+
+raw_data_path: "data/raw/HR_Analytics.csv"
+processed_data_path: "data/processed/HR_Processed.parquet"
+target_col: "Attrition"
+random_state: 42
+test_size: 0.2
+
+# Association Rules
+min_support: 0.1
+min_threshold: 0.5
+
+# Clustering
+n_clusters: 3
+
+# Model Hyperparameters
+xgb_params:
+  n_estimators: 100
+  max_depth: 6
+  learning_rate: 0.1
+  use_label_encoder: false
+  eval_metric: "logloss"
+
+# Semi-supervised
+labeled_fraction: 0.1 # Simulation for semi-supervised
